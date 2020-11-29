@@ -41,8 +41,8 @@
 			},
 			{
 				"command": "translation.changeProvider",
-				"key": "ctrl+shift+q",
-				"mac": "cmd+shift+q",
+				"key": "ctrl+shift+1",
+				"mac": "cmd+shift+1",
 				"when": "editorTextFocus"
 			}
 		],
