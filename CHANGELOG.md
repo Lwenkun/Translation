@@ -5,3 +5,6 @@ All notable changes to the "translation" extension will be documented in this fi
 ## 0.0.1 - 2020-11-30
 Initial release
 ### 增加百度、有道和谷歌翻译功能
+
+## 0.0.2 - 2020-11-30
+### 增加 mac 快捷键说明，更改快捷键，防止冲突
