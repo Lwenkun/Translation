@@ -18,7 +18,7 @@ export default function(query: string) {
             vscode.window.showErrorMessage("翻译失败，" + JSON.stringify(reason));
         });
     } else {
-        const url = `http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=en&tl=zh-CN&q=${query}`;
+        const url = encodeURI(`http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=en&tl=zh-CN&q=${query}`);
         axios.get(url).then((response: AxiosResponse<Result>) => {
             if (response.status !== 200) {
                 vscode.window.showErrorMessage(`翻译失败，请求失败，code=${response.status}`);
