@@ -27,7 +27,10 @@ export default function(query: string) {
             } else if (!response.data.sentences || response.data.sentences.length === 0) {
                 vscode.window.showErrorMessage('翻译失败，服务器返回的翻译结果为空');
             } else {
-                vscode.window.showInformationMessage(response.data.sentences[0].trans, '关闭');
+                const result = response.data.sentences.reduce<string>((prev: string, curr: {trans: string; orig: string}) => {
+                    return `${prev}${curr.trans}`;
+                }, '');
+                vscode.window.showInformationMessage(result, '关闭');
             }
         }, (reason: any) => {
             vscode.window.showErrorMessage("翻译失败，" + JSON.stringify(reason));
