@@ -4,7 +4,7 @@
 	"description": "英译汉翻译插件",
 	"publisher": "liwenkun",
 	"icon": "icon.png",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"license": "Apache-2.0",
 	"repository": {
 		"url": "https://github.com/Lwenkun/Translation",
