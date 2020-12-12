@@ -5,8 +5,13 @@ import { Md5 } from 'ts-md5';
 import querystring = require('querystring');
 
 export default function(query: string) {
-    const appId = vscode.workspace.getConfiguration().get<string>("translation.baidu.appId");
-    const appKey = vscode.workspace.getConfiguration().get<string>("translation.baidu.appKey");
+    let appId = vscode.workspace.getConfiguration().get<string>("translation.baidu.appId");
+    let appKey = vscode.workspace.getConfiguration().get<string>("translation.baidu.appKey");
+
+    if (!appId || appKey) {
+        appId = '20201210000643306';
+        appKey = 'n3_scpwt0YR_tCY2wAfe';
+    }
 
     const baseUrl = 'https://fanyi-api.baidu.com/api/trans/vip/translate';
 
