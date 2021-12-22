@@ -8,7 +8,7 @@ export default function(query: string) {
     let appId = vscode.workspace.getConfiguration().get<string>("translation.baidu.appId");
     let appKey = vscode.workspace.getConfiguration().get<string>("translation.baidu.appKey");
 
-    if (!appId || appKey) {
+    if (!appId || !appKey) {
         appId = '20201210000643306';
         appKey = 'n3_scpwt0YR_tCY2wAfe';
     }
